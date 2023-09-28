@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"/>
+        <css src="css/styles.css" media="all"/>
+        <css src="css/bootstrap.min.css" media="all"/>
+        <css src="https://use.fontawesome.com/releases/v5.15.4/css/all.css" src_type="url" />
+        <link src="http://fonts.googleapis.com/css?family=Roboto" src_type="url" rel="stylesheet" type="text/css" />
+        <script src="js/bootstrap.min.js"/>
+        <script src="js/custom.js"/>
+    </head>
+</page>

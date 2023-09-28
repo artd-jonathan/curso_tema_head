@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!-- /Disable elements -->
+    <referenceContainer name="catalog.compare.link" remove="true" />
+    <referenceContainer name="catalog.compare.sidebar" remove="true" />
+    <referenceContainer name="paypal.partner.right.logo" remove="true" />
+    <referenceContainer name="copyright" remove="true" />
+    <!-- <referenceContainer name="navigation.sections" remove="true" /> -->
+    <!-- Logo -->
+    <referenceBlock name="logo">
+        <arguments>
+            <argument name="logo_file" xsi:type="string">images/logo_parrot.png</argument>
+            <argument name="logo_img_width" xsi:type="number">10</argument>
+            <argument name="logo_img_height" xsi:type="number">10</argument>
+        </arguments>
+    </referenceBlock>
+    <referenceBlock name="top.search">
+        <action method="setTemplate">
+            <argument name="template" xsi:type="string">Magento_Theme::html/header/form_custom.phtml</argument>
+        </action>
+    </referenceBlock>
+    <referenceBlock name="header.links">
+        <action method="setTemplate">
+            <argument name="template" xsi:type="string">Magento_Theme::html/header/account-link.phtml</argument>
+        </action>
+    </referenceBlock>
+    <referenceBlock name="minicart">
+        <action method="setTemplate">
+            <argument name="template" xsi:type="string">Magento_Theme::html/header/my_minicart.phtml</argument>
+        </action>
+    </referenceBlock>
+    <referenceContainer name="header.container">
+        <container name="header.inner.container" label="headerContainer" htmlTag="div" htmlClass="container mt-4">
+            <container name="header.inner.flex" label="headerGrid" htmlTag="div" htmlClass="row align-items-center">
+
+                <container name="header.left" label="Header Left" htmlTag="div" htmlClass="col-3">
+                    
+                </container>
+
+                <container name="header.center" label="Header Center" htmlTag="div" htmlClass="col-5">
+                
+                </container>
+
+                <container name="header.right" label="Header Right" htmlTag="div" htmlClass="row col-4">
+                    <container name="header.right.account" label="Header Right account" htmlTag="div" htmlClass="col-9">
+                    
+                    </container>
+                    <container name="header.right.cart" label="Header Right cart" htmlTag="div" htmlClass="col-3">
+                    
+                    </container>
+
+                    
+                </container>
+            </container>
+        </container>
+    </referenceContainer>
+    
+    <move element="logo" destination="header.left" />
+    <move element="top.search" destination="header.center" after="navigation.sections" />
+    <move element="minicart" destination="header.right.cart" />
+    <!-- <move element="wish-list-link" destination="header.account" /> -->
+    <move element="header.links" destination="header.right.account" />
+</page>

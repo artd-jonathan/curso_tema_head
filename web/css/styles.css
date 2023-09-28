@@ -1,0 +1,73 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+.block-search {
+    float: right !important;
+    padding-left: 15px !important;
+    position: relative !important;
+    width: 100% !important;
+    z-index: 0 !important;
+}
+
+a:visited,
+.alink:visited {
+    color: #9F07A9 !important;
+    text-decoration: #ffbe00 !important;
+}
+
+.login-text {
+    color: #ffbe00
+}
+
+.create-text {
+    color: #9F07A9;
+    size: 4rem;
+}
+
+.cart-counter {
+    background-color: #9F07A9;
+    border-radius: 50%;
+    color: #ffbe00;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 20px;
+}
+
+/* Estilo para el div de superposición */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Asegura que el div esté en la parte superior */
+}
+
+/* Estilo para el div del GIF de carga */
+.loader {
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajusta el tamaño del GIF de carga según sea necesario */
+.loader img {
+    max-width: 100px;
+    max-height: 100px;
+}
